@@ -2,16 +2,32 @@ Resources:
   FoodDeliveryTable:
     Type: AWS::DynamoDB::Table
     Properties:
-      TableName: ${self:custom.tableName}
+      TableName: ${self:custom.FoodDeliveryTable}
       AttributeDefinitions:
-        - AttributeName: userId
+        - AttributeName: pk
           AttributeType: S
-        - AttributeName: vendorId
+        - AttributeName: sk
+          AttributeType: S
+        - AttributeName: data
           AttributeType: S
       KeySchema:
-        - AttributeName: userId
+        - AttributeName: pk
           KeyType: HASH
-        - AttributeName: vendorId
-          KeyType: HASH
-      # Set the capacity to auto-scale
-      BillingMode: PAY_PER_REQUEST
+        - AttributeName: sk
+          KeyType: RANGE
+      GlobalSecondaryIndexes:
+        - IndexName: GSI_1
+          KeySchema:
+            - AttributeName: sk
+              KeyType: HASH
+            - AttributeName: data
+              KeyType: RANGE
+          Projection:
+            ProjectionType: "ALL"
+          ProvisionedThroughput:
+            ReadCapacityUnits: ${self:custom.tableThroughput}
+            WriteCapacityUnits: ${self:custom.tableThroughput}
+      # Set the capacity based on the stage
+      ProvisionedThroughput:
+        ReadCapacityUnits: ${self:custom.tableThroughput}
+        WriteCapacityUnits: ${self:custom.tableThroughput}
