@@ -23,6 +23,7 @@ export const addMenuItem = async (args, context) => {
     }
   }
   catch(e) {
+    console.log(e);
     return e
   }
 }
