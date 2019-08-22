@@ -6,6 +6,6 @@ export const resolvers = {
         hello: (args, context) => hello(args, context)
     },
     Mutation: {
-        addMenuItem: (args, context) => addMenuItem(args, context)
+        addMenuItem: (root, {input:args}, context) => addMenuItem({input:args}, context)
     }
 }
