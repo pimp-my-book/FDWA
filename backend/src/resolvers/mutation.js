@@ -1,7 +1,7 @@
 import uuid from "uuid";
 import * as dynamodbLib from "../../libs/dynamodb-lib";
 
-export const addMenuItem = async (args, context) => {
+export const addMenuItem = async ({input:args}, context) => {
   const params = {
     TableName: process.env.FoodDeliveryTable,
     Item: {
