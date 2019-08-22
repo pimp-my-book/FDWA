@@ -19,7 +19,7 @@ type MenuItem {
 """
 Menu Item ID [Required]
 """
-ID: String!
+menuItemId: String!
 
 """
 Name of Menu Item [Required]
