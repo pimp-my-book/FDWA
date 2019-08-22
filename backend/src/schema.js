@@ -4,9 +4,9 @@ const schema = `
 INPUT
 """
 input UserItemInput {
-  name: String!,
+  itemName: String!,
   price: Int!,
-  vendor: String!,
+  vendorName: String!,
   size: String!,
 }
 
@@ -15,16 +15,20 @@ TYPE
 """
 
 type MenuItem {
+"""
+Vendor Name [pk]
+"""
+pk: String!
 
 """
-Menu Item ID [Required]
+Menu Item ID [sk]
 """
-menuItemId: String!
+sk: String!
 
 """
 Name of Menu Item [Required]
 """
-name: String!
+itemName: String!
 
 """
 Price of Menu Item [Required]
@@ -34,7 +38,7 @@ price: Int!
 """
 Vendor name [Required]
 """
-vendor: String!
+vendorName: String!
 
 """
 Size of meal [S,M,L]
