@@ -5,8 +5,8 @@ export const addMenuItem = async ({input:args}, context) => {
   const params = {
     TableName: process.env.FoodDeliveryTable,
     Item: {
-      pk: "vendorId-${uuid.v1()}",
-      sk: "menuItem-${uuid.v1()}",
+      pk: `vendorId-${uuid.v1()}`,
+      sk: `menuItemId-${uuid.v1()}`,
       itemName: args.itemName,
       price: args.price,
       vendorName: args.vendorName,
