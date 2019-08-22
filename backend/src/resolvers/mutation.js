@@ -13,17 +13,27 @@ import uuid from "uuid";
 import * as dynamodbLib from "../../libs/dynamodb-lib";
 
 export const addMenuItem = async (args, context) => {
-  ID: uuid.v1();
-  name: args.name;
-  price: args.price;
-  vendor: args.vendor;
-  size: args.size
-}
-
-export const placeOrder = async (args, context) => {
-  ID: uuid.v1();
-  total: args.total;
-  items: args.items;
-  deliveryMethod: args.deliveryMethod;
-  deliveryCost: args.deliveryCost;
+  const params = {
+    TableName: process.env.FoodDeliveryTable,
+    Item: {
+      menuItemId: uuid.v1(),
+      name: args.name,
+      price: args.price,
+      vendor: args.vendor,
+      size: args.size,
+    }
+  }
+  try {
+    await dynamodbLib.call("put", params);
+    return {
+      menuItemId: params.Item.menuItemId,
+      name: args.name,
+      price: args.price,
+      vendor: args.Item.vendor,
+      size: args.Item.size,
+    }
+  }
+  catch(e) {
+    return e
+  }
 }
