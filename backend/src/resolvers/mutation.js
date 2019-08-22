@@ -29,3 +29,7 @@ export const addMenuItem = async ({input:args}, context) => {
     return e
   }
 }
+
+export const placeOrder = async ({input:args}, context) => {
+  
+}
