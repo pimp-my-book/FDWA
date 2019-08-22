@@ -1,7 +1,7 @@
 {
-  "name": "backend",
+  "name": "fdwa-backend",
   "version": "1.1.0",
-  "description": "A GraphQL Node.js starter for the Serverless Framework with async/await and unit test support",
+  "description": "PMB Food Delivery Web Application - Backend",
   "main": "handler.js",
   "scripts": {
     "offline": "sls offline",
@@ -12,7 +12,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pimp-my-book/serverless-graphql-nodejs-starter"
+    "url": "https://github.com/pimp-my-book/FDWA/tree/master/backend"
   },
   "devDependencies": {
     "aws-sdk": "^2.514.0",
