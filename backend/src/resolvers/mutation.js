@@ -5,7 +5,7 @@ export const addMenuItem = async (args, context) => {
   const params = {
     TableName: process.env.FoodDeliveryTable,
     Item: {
-      menuItemId: uuid.v1(),
+      menuItemId: "menuItem-${uuid.v1()}",
       name: args.name,
       price: args.price,
       vendor: args.vendor,
@@ -18,8 +18,8 @@ export const addMenuItem = async (args, context) => {
       menuItemId: params.Item.menuItemId,
       name: args.name,
       price: args.price,
-      vendor: args.Item.vendor,
-      size: args.Item.size,
+      vendor: args.vendor,
+      size: args.size,
     }
   }
   catch(e) {
