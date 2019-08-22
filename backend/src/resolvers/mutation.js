@@ -10,6 +10,7 @@ export const addCars = async (args, context) => {
 
 */
 import uuid from "uuid";
+import * as dynamodbLib from "../../libs/dynamodb-lib";
 
 export const addMenuItem = async (args, context) => {
   ID: uuid.v1();
