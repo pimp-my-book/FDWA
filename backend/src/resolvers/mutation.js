@@ -1,14 +1,3 @@
-/*
-
-ADD YOUR MUTATION HERE:
-
-export const addCars = async (args, context) => {
-
-
-}
-
-
-*/
 import uuid from "uuid";
 import * as dynamodbLib from "../../libs/dynamodb-lib";
 
