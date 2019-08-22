@@ -93,12 +93,7 @@ MUTATION
 
 type Mutation {
 
-addMenuItem(
-  name: String!,
-  price: Int!,
-  vendor: String!,
-  size: String
-): MenuItem
+addMenuItem(input: UserItemInput): MenuItem
 
 placeOrder(
   total: Int!,
