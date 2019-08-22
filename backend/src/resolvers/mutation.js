@@ -5,20 +5,22 @@ export const addMenuItem = async ({input:args}, context) => {
   const params = {
     TableName: process.env.FoodDeliveryTable,
     Item: {
-      menuItemId: "menuItem-${uuid.v1()}",
-      name: args.name,
+      pk: "vendorId-${uuid.v1()}",
+      sk: "menuItem-${uuid.v1()}",
+      itemName: args.itemName,
       price: args.price,
-      vendor: args.vendor,
+      vendorName: args.vendorName,
       size: args.size,
     }
   }
   try {
     await dynamodbLib.call("put", params);
     return {
-      menuItemId: params.Item.menuItemId,
-      name: args.name,
+      pk: params.Item.pk,
+      sk: params.Item.sk,
+      itemName: args.itemName,
       price: args.price,
-      vendor: args.vendor,
+      vendorName: args.vendorName,
       size: args.size,
     }
   }
