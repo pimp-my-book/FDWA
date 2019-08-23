@@ -11,7 +11,10 @@ input UserItemInput {
 }
 
 input PlaceOrderInput {
-
+  allOrderItems: [UserItemInput],
+  deliveryMethod: String!,
+  deliveryCost: String,
+  orderTotal: Int!
 }
 
 """
