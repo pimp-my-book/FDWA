@@ -67,24 +67,24 @@ Order ID [sk]
 sk: String!
 
 """
-Total price from items [Required]
-"""
-total: Int!
-
-"""
 items pulled from predefined MenuItem
 """
-items: [MenuItem]
+allOrderItems: [MenuItem]
 
 """
 Delivery type to use [Required]
 """
-DeliveryMethod: String!
+deliveryMethod: String!
 
 """
 Cost of order delivery
 """
-DeliveryCost: Int
+deliveryCost: Int
+
+"""
+Total price from order [Required]
+"""
+orderTotal: Int!
 
 }
 
