@@ -36,6 +36,10 @@ export const placeOrder = async ({input:args}, context) => {
     Item: {
       pk: `userId-${uuid.v1()}`,
       sk: `orderId-${uuid.v1()}`,
+      itemName: args.itemName,
+      price: args.price,
+      vendorName: args.vendorName,
+      size: args.size,
       allOrderItems: args.allOrderItems,
       deliveryMethod: args.deliveryMethod,
       deliveryCost: args.deliveryCost,
@@ -47,6 +51,10 @@ export const placeOrder = async ({input:args}, context) => {
     return {
       pk: params.Item.pk,
       sk: params.Item.sk,
+      itemName: args.itemName,
+      price: args.price,
+      vendorName: args.vendorName,
+      size: args.size,
       allOrderItems: args.allOrderItems,
       deliveryMethod: args.deliveryMethod,
       deliveryCost: args.deliveryCost,
