@@ -31,5 +31,15 @@ export const addMenuItem = async ({input:args}, context) => {
 }
 
 export const placeOrder = async ({input:args}, context) => {
-  
+  const params = {
+    TableName: process.env.FoodDeliveryTable,
+    Item: {
+      pk: `userId-${uuid.v1()}`,
+      sk: `orderId-${uuid.v1()}`,
+      allOrderItems: args.allOrderItems,
+      deliveryMethod: args.deliveryMethod,
+      deliveryCost: args.deliveryCost,
+      orderTotal: args.orderTotal
+    }
+  }
 }
