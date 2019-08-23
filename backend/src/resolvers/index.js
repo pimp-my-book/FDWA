@@ -7,7 +7,7 @@ export const resolvers = {
         getAllItems: (args, context) => getAllItems(args, context)
     },
     Mutation: {
-        addMenuItem: ({input:args}, context) => addMenuItem({input:args}, context),
-        placeOrder: ({input:args}, context) => placeOrder({input:args}, context)
+        addMenuItem: (root, {input:args}, context) => addMenuItem({input:args}, context),
+        placeOrder: (root, {input:args}, context) => placeOrder({input:args}, context)
     }
 }
