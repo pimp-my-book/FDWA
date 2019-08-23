@@ -42,4 +42,19 @@ export const placeOrder = async ({input:args}, context) => {
       orderTotal: args.orderTotal
     }
   }
+  try {
+    await dynamodbLib.call("put", params);
+    return {
+      pk: params.Item.pk,
+      sk: params.Item.sk,
+      allOrderItems: args.allOrderItems,
+      deliveryMethod: args.deliveryMethod,
+      deliveryCost: args.deliveryCost,
+      orderTotal: args.orderTotal
+    }
+  }
+  catch(e) {
+    console.log(e);
+    return e
+  }
 }
