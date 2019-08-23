@@ -10,6 +10,10 @@ input UserItemInput {
   size: String!,
 }
 
+input PlaceOrderInput {
+
+}
+
 """
 TYPE
 """
@@ -50,9 +54,14 @@ size: String
 type Order {
 
 """
-Order ID [Required]
+User ID [pk]
 """
-ID: String!
+pk: String!
+
+"""
+Order ID [sk]
+"""
+sk: String!
 
 """
 Total price from items [Required]
