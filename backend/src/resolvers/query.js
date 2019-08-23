@@ -5,24 +5,14 @@ export const hello = (args, context) => {
 }
 
 export const getAllItems = async (args, context) => {
-  const params ={
+  const params = {
     TableName: process.env.FoodDeliveryTable,
-    KeyConditionExpression: "itemName = :itemName",
-    ExpressionAttributeValues: {
-      ":itemName": args.itemName
-    }
   }
   try {
-    const result = await dynamodbLib.call("query", params);
-    if (result.Item) {
-      return result.Item;
-    }
-    else {
-      return "No items found within table"
-    }
+    const result = await dynamodbLib.call("scan", params);
+    return result.Items
   }
-  catch (e) {
-    console.log(e);
+  catch(e) {
     return e;
   }
 }
