@@ -67,7 +67,7 @@ Order ID [sk]
 sk: String!
 
 """
-items pulled from predefined MenuItem
+Items pulled from predefined MenuItem
 """
 allOrderItems: [MenuItem]
 
