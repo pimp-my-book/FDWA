@@ -7,13 +7,16 @@ input UserItemInput {
   itemName: String!,
   price: Int!,
   vendorName: String!,
-  size: String!,
+  size: String,
 }
 
 input PlaceOrderInput {
-  allOrderItems: [UserItemInput],
+  itemName: String!,
+  price: Int!,
+  vendorName: String!,
+  size: String!,
   deliveryMethod: String!,
-  deliveryCost: String,
+  deliveryCost: Int,
   orderTotal: Int!
 }
 
