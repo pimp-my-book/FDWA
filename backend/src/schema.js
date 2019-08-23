@@ -108,15 +108,14 @@ MUTATION
 """
 
 type Mutation {
-
-addMenuItem(input: UserItemInput): MenuItem
-
-placeOrder(
-  total: Int!,
-  items: [UserItemInput],
-  DeliveryMethod: String!,
-  DeliveryCost: Int
-): Order
+"""
+Add Menu Item to Table
+"""
+addMenuItem(input: UserItemInput): MenuItem,
+"""
+Add user Order to Table
+"""
+placeOrder(input: PlaceOrderInput): Order
 
 }
 
