@@ -1,6 +1,8 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import { Navbar } from "react-bootstrap";
+import Routes from "./Routes";
+import './styles/styles.css';
 
 function App() {
   return (
