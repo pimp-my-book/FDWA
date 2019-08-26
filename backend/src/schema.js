@@ -1,57 +1,100 @@
 const schema = `
 
 """
-Defining Menu Item used for Order Creation
+INPUT
 """
+input UserItemInput {
+  itemName: String!,
+  price: Int!,
+  vendorName: String!,
+  size: String,
+}
+
+input PlaceOrderInput {
+  itemName: String!,
+  price: Int!,
+  vendorName: String!,
+  size: String!,
+  deliveryMethod: String!,
+  deliveryCost: Int,
+  orderTotal: Int!
+}
+
+"""
+TYPE
+"""
+
 type MenuItem {
 """
-Menu Item ID [Required]
+Vendor Name [pk]
 """
-ID: String!
+pk: String!
+
+"""
+Menu Item ID [sk]
+"""
+sk: String!
+
 """
 Name of Menu Item [Required]
 """
-name: String!
+itemName: String!
+
 """
 Price of Menu Item [Required]
 """
 price: Int!
+
 """
 Vendor name [Required]
 """
-vendor: String!
+vendorName: String!
+
 """
 Size of meal [S,M,L]
 """
 size: String
+
 }
 
 type Order {
+
 """
-Order ID [Required]
+User ID [pk]
 """
-ID: String!
+pk: String!
+
 """
-Total price from items [Required]
+Order ID [sk]
 """
-total: Int!
+sk: String!
+
 """
-items pulled from predefined MenuItem
+Items pulled from predefined MenuItem
 """
-items: [MenuItem]
+allOrderItems: [MenuItem]
+
 """
 Delivery type to use [Required]
 """
-DeliveryMethod: String!
+deliveryMethod: String!
+
 """
 Cost of order delivery
 """
-DeliveryCost: Int
+deliveryCost: Int
+
+"""
+Total price from order [Required]
+"""
+orderTotal: Int!
+
 }
 
 """
-READ
+QUERY
 """
+
 type Query {
 """
 Use predefined MenuItem to list all Menu Items
@@ -64,25 +107,18 @@ hello: String!
 }
 
 """
-WRITE
+MUTATION
 """
+
 type Mutation {
 """
-Add name to menu item [Required]
+Add Menu Item to Table
 """
-addMenuItem(name: String!,
+addMenuItem(input: UserItemInput): MenuItem,
 """
-Add price to menu item [Required]
+Add user Order to Table
 """
-price: Int!,
-"""
-Vendor name providing item [Required]
-"""
-vendor: String!,
-"""
-Size of meal [S,M,L]
-"""
-size: String): MenuItem
+placeOrder(input: PlaceOrderInput): Order
 
 }
 
