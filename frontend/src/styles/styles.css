@@ -1,5 +1,5 @@
 .App {
-  margin-top: 15px;
+  margin-top: 5px;
 }
 
 .App .navbar-brand {
@@ -7,7 +7,7 @@
 }
 
 .Home .landingPage {
-  padding: 80px 0;
+  padding: 5px 0;
   text-align: center;
 }
 
@@ -29,6 +29,12 @@
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
+  padding-top: 5%;
+}
+
+.container-fluid {
+  display: flex !important;
+  justify-content: center !important;
 }
 
 body {
