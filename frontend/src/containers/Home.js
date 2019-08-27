@@ -8,7 +8,8 @@ export default class Home extends Component {
       <div className="Home">
         <div className="landingPage">
           <h1>Pimp My Book</h1>
-          <h3>Food Delivery Web Application [GraphQL - Test Suite]</h3>
+          <h3>Food Delivery Web Application</h3>
+          <h4>[GraphQL - Frontend Test Suite]</h4>
           <Grid>
             <Row>
               <Col xs={6} md={4}>
