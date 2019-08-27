@@ -29,6 +29,12 @@
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
+  padding-top: 5%;
+}
+
+.container-fluid {
+  display: flex !important;
+  justify-content: center !important;
 }
 
 body {
