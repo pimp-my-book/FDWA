@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import { Button, ButtonToolbar, Grid, Col, Row } from 'react-bootstrap';
+import Routes from "../Routes";
 import "../styles/styles.css";
 
 export default class Home extends Component {
@@ -15,9 +17,11 @@ export default class Home extends Component {
               <Col xs={6} md={4}>
               </Col>
               <Col xs={6} md={4}>
-                <ButtonToolbar classname=".homeButtonToolbar">
-                  <Button bsStyle="primary" bsStyle="primary">Queries</Button>
-                  <Button bsStyle="primary" bsStyle="primary">Mutations</Button>
+                <ButtonToolbar className="homeButtonToolbar">
+                  <Link to="/queries/helloWorld">
+                    <Button bsStyle="primary">Hello World</Button>
+                  </Link>
+                    <Button bsStyle="primary">Mutations</Button>
                 </ButtonToolbar>
               </Col>
               <Col xs={6} md={4}>
