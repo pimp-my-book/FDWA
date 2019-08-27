@@ -1,5 +1,10 @@
 import React, { Component } from "react";
 import { Button, ButtonToolbar, Grid, Col, Row } from 'react-bootstrap';
+import React, { Component, Fragment } from "react";
+import { Button, ButtonToolbar, Grid, Col, Row } from "react-bootstrap";
+import { Query } from "react-apollo";
+import { helloWorld } from "../graphql/Queries";
+import alertComponent from "../components/alertComponent";
 import "../styles/styles.css";
 
 export default class helloWorld extends Component {
