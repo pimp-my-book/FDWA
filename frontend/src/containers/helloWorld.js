@@ -1,5 +1,3 @@
-import React, { Component } from "react";
-import { Button, ButtonToolbar, Grid, Col, Row } from 'react-bootstrap';
 import React, { Component, Fragment } from "react";
 import { Button, ButtonToolbar, Grid, Col, Row } from "react-bootstrap";
 import { Query } from "react-apollo";
