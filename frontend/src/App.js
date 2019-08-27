@@ -11,7 +11,7 @@ class App extends Component {
         <Navbar fluid collapseOnSelect>
           <Navbar.Header>
             <Navbar.Brand>
-              <Link to="/">FDWA🍕</Link>
+              <Link to="/"><span role="img" aria-label="Pizza">🍕</span></Link>
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>
