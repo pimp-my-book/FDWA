@@ -17,7 +17,42 @@ export default class helloWorldQuery extends Component {
               <Col xs={6} md={4}>
               </Col>
               <Col xs={6} md={4}>
+                <h5><u>Output</u></h5>
+              </Col>
+              <Col xs={6} md={4}>
+              </Col>
+            </Row>
+            <Row>
+              <Col xs={6} md={4}>
+              </Col>
+              <Col xs={6} md={4}>
+                <Query query={ helloWorld }>
+                  {
+                    ({ data, loading, error }) => {
+                      // On load [Display Heading]
+                      if (loading) return (
+                        <Grid>
+                          <Row>
+                            <Col>
+                              <h6>loading...</h6>
+                            </Col>
+                          </Row>
+                        </Grid>
+                      );
 
+                      // On query fail [Print Error]
+                      if (error) return (
+                        <Fragment>
+                          <alertComponent text = { error.message.replace("GraphQL Error:", "") } variant="danger" />
+                        </Fragment>
+                      );
+
+                      //
+
+                    }
+                  }
+                </Query>
+                />
               </Col>
               <Col xs={6} md={4}>
               </Col>
