@@ -5,7 +5,7 @@ import { helloWorld } from "../graphql/Queries";
 import alertComponent from "../components/alertComponent";
 import "../styles/styles.css";
 
-export default class helloWorld extends Component {
+export default class helloWorldQuery extends Component {
   render() {
     return (
       <div className="Home">
