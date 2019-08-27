@@ -1,13 +1,28 @@
 import React from 'react';
 import { BrowserRouter as Router } from "react-router-dom";
 import ReactDOM from 'react-dom';
+import { ApolloProvider } from 'react-apollo';
+import { ApolloClient } from 'apollo-boost';
+import { createHttpLink } from 'apollo-link-http';
+import { InMemoryCache } from 'apollo-cache-inmemory';
 import './styles/styles.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+const httpLink = createHttpLink({
+  uri: 'http://localhost:4000'
+})
+
+const client = new ApolloClient({
+  link: httpLink,
+  cache: new InMemoryCache()
+})
+
 ReactDOM.render(
   <Router>
-    <App />
+    <ApolloProvider client={client}>
+      <App />
+    </ApolloProvider>
   </Router>,
   document.getElementById("root")
 );
