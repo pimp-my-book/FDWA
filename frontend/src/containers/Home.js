@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Button, ButtonToolbar, Grid, Col, Row } from 'react-bootstrap';
-import Routes from "../Routes";
 import "../styles/styles.css";
 
 export default class Home extends Component {
