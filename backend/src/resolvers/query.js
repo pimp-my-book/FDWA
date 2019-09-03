@@ -16,3 +16,20 @@ export const getAllItems = async (args, context) => {
     return e;
   }
 }
+
+export const customerOrderList = async (args, context) => {
+  const params = {
+    TableName: process.env.FoodDeliveryTable,
+    KeyConditionExpression: "pk = :pk",
+    ExpressionAttributeValues: {
+      ":pk": context.event.requestContext.authorizer.claims.sub
+    }
+    };
+  try {
+    const result = await dynamodbLib.call("query", params);
+    return result.Items
+  }
+  catch(e) {
+    return e;
+  }
+}
