@@ -7,7 +7,7 @@ export const HELLO_WORLD = gql `
  }`;
 
 export const GET_ALL_ITEMS = gql `
-query GetAllItems{
+query GET_ALL_ITEMS{
   getAllItems{
     pk
     sk
