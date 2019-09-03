@@ -20,7 +20,7 @@ query GetAllItems{
 
 export const CUSTOMER_ORDER_LIST = gql `
 query CUSTOMER_ORDER_LIST($pk: String!){
-  customerOrderList(pk:$userId){
+  customerOrderList(pk: $pk){
     pk
     sk
     itemName
