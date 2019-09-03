@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { Grid, Col, Row } from "react-bootstrap";
 import { Query } from "react-apollo";
-import { helloWorld } from "../graphql/Queries";
+import { Grid, Col, Row } from "react-bootstrap";
+import HelloWorld from "../components/HelloWorld";
 import "../styles/styles.css";
 
 export default class helloWorldQuery extends Component {
