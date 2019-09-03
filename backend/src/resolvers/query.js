@@ -22,7 +22,7 @@ export const customerOrderList = async (args, context) => {
     TableName: process.env.FoodDeliveryTable,
     KeyConditionExpression: "pk = :pk",
     ExpressionAttributeValues: {
-      ":pk": context.event.requestContext.authorizer.claims.sub
+      ":pk": "userId-b82cb180-c5b5-11e9-ab64-5f22eec26915"
     }
     };
   try {
