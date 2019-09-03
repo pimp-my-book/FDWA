@@ -25,18 +25,7 @@ export default class helloWorldQuery extends Component {
                 <Col xs={6} md={4}>
                 </Col>
                 <Col xs={6} md={4}>
-                  <Query query={ helloWorld }>
-                    {({error, loading, data}) => {
-                      if (loading) return <div>Fetching</div>;
-                      if (error) return <div>Error</div>;
-                      const returnValue = data.hello
-                      return(
-                        <div>
-                          {returnValue}
-                        </div>
-                      )
-                    }}
-                  </Query>
+                  <HelloWorld />
                 </Col>
                 <Col xs={6} md={4}>
                 </Col>
