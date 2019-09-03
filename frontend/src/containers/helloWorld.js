@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Grid, Col, Row } from "react-bootstrap";
-import { Query } from "react-apollo";
 import HelloWorld from "../components/HelloWorld";
 import "../styles/styles.css";
 
