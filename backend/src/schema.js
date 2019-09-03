@@ -101,6 +101,10 @@ Use predefined MenuItem to list all Menu Items
 """
 getAllItems: [MenuItem],
 """
+Get Customer Specific Orders
+"""
+customerOrderList(pk: String!): [MenuItem],
+"""
 Hello World
 """
 hello: String!
