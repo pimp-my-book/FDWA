@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Query } from "react-apollo";
-import { helloWorld, GET_ALL_ITEMS } from "../graphql/Queries";
+import { GET_ALL_ITEMS } from "../graphql/Queries";
 
 class getAllItems extends Component {
   render() {
