@@ -1,0 +1,37 @@
+import React, { Component } from "react";
+import { Grid, Col, Row } from "react-bootstrap";
+
+import "../styles/styles.css";
+
+export default class getAllItemsQuery extends Component {
+  render() {
+    return (
+      <div className="Home">
+        <div className="landingPage">
+          <h1>Get All Items</h1>
+          <h3>Print all items within table</h3>
+            <Grid>
+              <Row>
+                <Col xs={6} md={4}>
+                </Col>
+                <Col xs={6} md={4}>
+                  <h5><u>Output</u></h5>
+                </Col>
+                <Col xs={6} md={4}>
+                </Col>
+              </Row>
+              <Row>
+                <Col xs={6} md={4}>
+                </Col>
+                <Col xs={6} md={4}>
+
+                </Col>
+                <Col xs={6} md={4}>
+                </Col>
+              </Row>
+            </Grid>
+        </div>
+      </div>
+    );
+  }
+}
