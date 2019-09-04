@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import { Query } from "react-apollo";
 import { GET_ALL_ITEMS } from "../graphql/Queries";
 import { Grid, Col, Row } from "react-bootstrap";
@@ -31,6 +31,9 @@ export default class GetAllItems extends Component {
                       if (error) return <div>Error</div>;
                       const allItems = data.getAllItems;
                       console.log(allItems);
+                      return(
+                        null
+                      );
                       }
                     }
                   </Query>
