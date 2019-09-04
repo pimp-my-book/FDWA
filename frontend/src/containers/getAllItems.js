@@ -2,10 +2,17 @@ import React, { Component, Fragment } from "react";
 import { Query } from "react-apollo";
 import { GET_ALL_ITEMS } from "../graphql/Queries";
 import { Container, Col, Row } from "react-bootstrap";
+//import itemCard from "../components/itemCard";
+import styled from "styled-components";
 import "../styles/styles.css";
 
 export default class GetAllItems extends Component {
   render() {
+    const itemName = styled.div `
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: repeat( 2, 3fr );
+    `;
     return (
       <div className="Home">
         <div className="landingPage">
@@ -32,7 +39,9 @@ export default class GetAllItems extends Component {
                       const allItems = data.getAllItems;
                       console.log(allItems);
                       return(
-                        null
+                        <Fragment key={ allItems.pk }>
+                          //<itemCard itemName={ allItems.itemName } />
+                        </Fragment>
                       );
                       }
                     }
