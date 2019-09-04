@@ -69,3 +69,7 @@ functions:
 resources:
   #DynamoDB
   - ${file(resources/fdwa-table.yml)}
+  #Cognito - User Pool
+  - ${file(resources/cognito-user-pool.yml)}
+  #Cognito - Identity pool
+  - ${file(resources/cognito-identity-pool.yml)}
