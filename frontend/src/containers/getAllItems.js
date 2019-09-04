@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react";
 import { Query } from "react-apollo";
 import { GET_ALL_ITEMS } from "../graphql/Queries";
-import { Grid, Col, Row } from "react-bootstrap";
+import { Container, Col, Row } from "react-bootstrap";
 import "../styles/styles.css";
 
 export default class GetAllItems extends Component {
@@ -11,7 +11,7 @@ export default class GetAllItems extends Component {
         <div className="landingPage">
           <h1>Get All Items</h1>
           <h3>GraphQL - Get All Items Query</h3>
-            <Grid>
+            <Container>
               <Row>
                 <Col xs={6} md={4}>
                 </Col>
@@ -41,7 +41,7 @@ export default class GetAllItems extends Component {
                 <Col xs={6} md={4}>
                 </Col>
               </Row>
-            </Grid>
+            </Container>
         </div>
       </div>
     );
