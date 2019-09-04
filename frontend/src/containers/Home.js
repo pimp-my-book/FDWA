@@ -20,6 +20,9 @@ export default class Home extends Component {
                   <Link to="/queries/helloWorld">
                     <Button bsStyle="primary">Hello World</Button>
                   </Link>
+                  <Link to="/queries/getAllItems">
+                    <Button bsStyle="primary">Get All Items</Button>
+                  </Link>
                 </ButtonToolbar>
               </Col>
               <Col xs={6} md={4}>
