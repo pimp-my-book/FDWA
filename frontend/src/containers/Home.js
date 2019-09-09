@@ -17,12 +17,12 @@ export default class Home extends Component {
               </Col>
               <Col xs={6} md={4}>
                 <ButtonToolbar className="homeButtonToolbar">
-                  <Link to="/queries/helloWorld">
-                    <Button bsStyle="primary">Hello World</Button>
-                  </Link>
-                  <Link to="/queries/getAllItems">
-                    <Button bsStyle="primary">Get All Items</Button>
-                  </Link>
+                    <Link to="/queries/helloWorld">
+                      <Button bsStyle="primary">Hello World</Button>
+                    </Link>
+                    <Link to="/queries/getAllItems">
+                      <Button bsStyle="primary">Get All Items</Button>
+                    </Link>
                 </ButtonToolbar>
               </Col>
               <Col xs={6} md={4}>

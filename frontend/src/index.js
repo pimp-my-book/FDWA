@@ -11,7 +11,6 @@ import * as serviceWorker from './serviceWorker';
 
 const stage = process.env.REACT_APP_STAGE === "prod";
 
-// stage ? process.env.REACT_APP_GRAPHQL_ENDPNT_PROD : process.env.REACT_APP_GRAPHQL_ENDPNT_DEV
 const httpLink = createHttpLink({
   uri: stage ? process.env.REACT_APP_GRAPHQL_ENDPNT_PROD : process.env.REACT_APP_GRAPHQL_ENDPNT_DEV
 });
