@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react";
 import { Query } from "react-apollo";
 import { GET_ALL_ITEMS } from "../graphql/Queries";
-import { Container, Col, Row } from "react-bootstrap";
+import {  Col, Row } from "react-bootstrap";
 //import itemCard from "../components/itemCard";
 import styled from "styled-components";
 import "../styles/styles.css";
@@ -18,7 +18,7 @@ export default class GetAllItems extends Component {
         <div className="landingPage">
           <h1>Get All Items</h1>
           <h3>GraphQL - Get All Items Query</h3>
-            <Container>
+           
               <Row>
                 <Col xs={6} md={4}>
                 </Col>
@@ -39,8 +39,13 @@ export default class GetAllItems extends Component {
                       const allItems = data.getAllItems;
                       console.log(allItems);
                       return(
-                        <Fragment key={ allItems.pk }>
-                          //<itemCard itemName={ allItems.itemName } />
+                        <Fragment>
+                          {allItems.map((items) => (
+                            <Fragment  key={ allItems.pk }>
+                             //<itemCard itemName={ allItems.itemName } />
+                             </Fragment>
+                          ))}
+                          
                         </Fragment>
                       );
                       }
@@ -50,7 +55,7 @@ export default class GetAllItems extends Component {
                 <Col xs={6} md={4}>
                 </Col>
               </Row>
-            </Container>
+            
         </div>
       </div>
     );
