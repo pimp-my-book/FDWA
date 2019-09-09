@@ -42,7 +42,9 @@ export default class Home extends Component {
               </Col>
               <Col xs={6} md={4}>
                 <ButtonToolbar className="homeButtonToolbar">
-                      <Button bsStyle="primary">Place Order</Button>
+                  <Link to="/mutations/placeOrder">
+                    <Button bsStyle="primary">Place Order</Button>
+                  </Link>
                 </ButtonToolbar>
               </Col>
               <Col xs={6} md={4}>
