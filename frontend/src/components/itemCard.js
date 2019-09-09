@@ -1,20 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import Heading from "./typography/Heading";
-import Textbody from "./typography/Textbody";
 import { Card, Container, Row, Col } from "react-bootstrap";
 
 const CardStyles = styled(Card) `
   &&& {
-    width:450px;
-    height: 300px;
-    border-radius: 5px;
-    border: none;
+    width: 300px;
+    height: 150px;
+    padding: 5%;
     box-shadow: 0px 2px 4px rgba(0,0,0,0.18);
     background-color: white;
-
-    @media (max-width: 600px){
-      width:350px;
     }
   }
 `;
@@ -29,11 +24,32 @@ const ItemCard = ({
 }) => {
   return(
     <CardStyles { ...props }>
-      <Card.Body className="text-align-center justify-content-center">
+      <Card.Body>
         <Container>
-          <Row className="justify-content-end">
+          <Row>
             <Col>
               <Heading>{ itemName }</Heading>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <Card.Text>
+                Price: R{ itemPrice }
+              </Card.Text>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <Card.Text>
+                Vendor Name: { vendorName }
+              </Card.Text>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <Card.Text>
+                Meal Size: { mealSize }
+              </Card.Text>
             </Col>
           </Row>
         </Container>
