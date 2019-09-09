@@ -1,5 +1,6 @@
-import React, { Component, Fragment } from "react";
-import { Col, Row } from "react-bootstrap";
+import React, { Component } from "react";
+import { Button, Form, Col, Row, Container } from "react-bootstrap";
+import "../styles/styles.css";
 
 export default class PlaceOrder extends Component {
   render() {
@@ -19,7 +20,30 @@ export default class PlaceOrder extends Component {
             </Row>
         </div>
         <div>
-
+            <Container className="placeOrder-form-container">
+                <Form>
+                    <Form.Row>
+                        <Form.Group as={Col} controlId="formItemSelect">
+                            <Form.Label>Items</Form.Label>
+                            <Form.Control as="select">
+                                <option>Choose...</option>
+                                <option>Rum Sprinkles</option>
+                                <option>Cheese Nuggets</option>
+                                <option>Big Mac</option>
+                                <option>Wings</option>
+                                <option>Fold-Over</option>
+                            </Form.Control>
+                        </Form.Group>
+                    </Form.Row>
+                    <Form.Row>
+                        <Form.Check label="Delivery" type="radio" id="01-inline-deliveryMethod" />
+                        <Form.Check label="Pick-Up" type="radio" id="02-inline-deliveryMethod" />
+                    </Form.Row>
+                    <Button variant="primary" type="submit">
+                        Place Order
+                    </Button>
+                </Form>
+            </Container>
         </div>
       </div>
     );
