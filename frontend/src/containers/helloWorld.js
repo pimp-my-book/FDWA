@@ -1,16 +1,16 @@
 import React, { Component } from "react";
-import { Grid, Col, Row } from "react-bootstrap";
+import {  Col, Row } from "react-bootstrap";
 import HelloWorld from "../components/HelloWorld";
 import "../styles/styles.css";
 
-export default class helloWorldQuery extends Component {
+export default class helloWorld extends Component {
   render() {
     return (
       <div className="Home">
         <div className="landingPage">
           <h1>Hello World</h1>
           <h3>GraphQL - Hello World Query</h3>
-            <Grid>
+            
               <Row>
                 <Col xs={6} md={4}>
                 </Col>
@@ -29,7 +29,7 @@ export default class helloWorldQuery extends Component {
                 <Col xs={6} md={4}>
                 </Col>
               </Row>
-            </Grid>
+            
         </div>
       </div>
     );
