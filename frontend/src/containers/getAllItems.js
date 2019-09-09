@@ -43,7 +43,11 @@ export default class GetAllItems extends Component {
                         <Fragment>
                           {allItems.map((items) => (
                             <Fragment  key={ items.pk }>
-                             <ItemCard itemName={ items.itemName } />
+                             <ItemCard
+                              vendorName={ items.vendorName } 
+                              itemName={ items.itemName }
+                              itemPrice={ items.price }
+                              mealSize={ items.size } />
                              </Fragment>
                           ))}
                           
