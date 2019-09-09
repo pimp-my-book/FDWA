@@ -23,6 +23,7 @@ custom:
     port: 4000
 
 provider:
+  profile: personal
   name: aws
   runtime: nodejs8.10
   stage: dev

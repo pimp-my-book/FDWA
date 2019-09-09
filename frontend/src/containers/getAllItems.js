@@ -35,14 +35,15 @@ export default class GetAllItems extends Component {
                   <Query query={ GET_ALL_ITEMS }>
                     {({ data, loading, error }) => {
                       if (loading) return <div>Fetching</div>;
-                      if (error) return <div>Error</div>;
+                      if (error) return <div>{Error}</div>;
+                      console.log(error)
                       const allItems = data.getAllItems;
                       console.log(allItems);
                       return(
                         <Fragment>
                           {allItems.map((items) => (
                             <Fragment  key={ allItems.pk }>
-                             //<itemCard itemName={ allItems.itemName } />
+                             <itemCard itemName={ allItems.itemName } />
                              </Fragment>
                           ))}
                           

@@ -19,7 +19,7 @@ const CardStyles = styled(Card) `
   }
 `;
 
-const itemCard = ({
+const ItemCard = ({
   itemName,
 
   ...props
@@ -39,4 +39,4 @@ const itemCard = ({
   )
 }
 
-export default itemCard;
+export default ItemCard;
