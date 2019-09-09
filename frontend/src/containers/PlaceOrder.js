@@ -34,6 +34,15 @@ export default class PlaceOrder extends Component {
                                 <option>Fold-Over</option>
                             </Form.Control>
                         </Form.Group>
+                        <Form.Group>
+                            <Form.Label as={Col} controlId="formMealSize">Meal Size</Form.Label>
+                            <Form.Control as="select">
+                                <option>Choose...</option>
+                                <option>Small</option>
+                                <option>Medium</option>
+                                <option>Large</option>
+                            </Form.Control>
+                        </Form.Group>
                     </Form.Row>
                     <Form.Row>
                         <Form.Check label="Delivery" type="radio" id="01-inline-deliveryMethod" />
@@ -44,6 +53,9 @@ export default class PlaceOrder extends Component {
                     </Button>
                 </Form>
             </Container>
+        </div>
+        <div>
+            PRINT SELECTED ITEMS HERE -_-
         </div>
       </div>
     );
