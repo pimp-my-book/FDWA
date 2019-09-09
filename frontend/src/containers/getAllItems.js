@@ -2,7 +2,7 @@ import React, { Component, Fragment } from "react";
 import { Query } from "react-apollo";
 import { GET_ALL_ITEMS } from "../graphql/Queries";
 import {  Col, Row } from "react-bootstrap";
-//import itemCard from "../components/itemCard";
+import ItemCard from "../components/ItemCard";
 import styled from "styled-components";
 import "../styles/styles.css";
 
@@ -42,8 +42,8 @@ export default class GetAllItems extends Component {
                       return(
                         <Fragment>
                           {allItems.map((items) => (
-                            <Fragment  key={ allItems.pk }>
-                             <itemCard itemName={ allItems.itemName } />
+                            <Fragment  key={ items.pk }>
+                             <ItemCard itemName={ items.itemName } />
                              </Fragment>
                           ))}
                           
