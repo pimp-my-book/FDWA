@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-//import { Link } from "react-router-dom";
 import Heading from "./typography/Heading";
+import Textbody from "./typography/Textbody";
 import { Card, Container, Row, Col } from "react-bootstrap";
 
 const CardStyles = styled(Card) `
@@ -20,7 +20,10 @@ const CardStyles = styled(Card) `
 `;
 
 const ItemCard = ({
+  vendorName,
   itemName,
+  itemPrice,
+  mealSize,
 
   ...props
 }) => {
