@@ -70,9 +70,24 @@ Order ID [sk]
 sk: String!
 
 """
-Items pulled from predefined MenuItem
+Name of Menu Item [Required]
 """
-allOrderItems: [MenuItem]
+itemName: String!
+
+"""
+Price of Menu Item [Required]
+"""
+price: Int!
+
+"""
+Vendor name [Required]
+"""
+vendorName: String!
+
+"""
+Size of meal [S,M,L]
+"""
+size: String
 
 """
 Delivery type to use [Required]
