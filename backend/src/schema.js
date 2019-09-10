@@ -70,9 +70,24 @@ Order ID [sk]
 sk: String!
 
 """
-Items pulled from predefined MenuItem
+Name of Menu Item [Required]
 """
-allOrderItems: [MenuItem]
+itemName: String!
+
+"""
+Price of Menu Item [Required]
+"""
+price: String!
+
+"""
+Vendor name [Required]
+"""
+vendorName: String!
+
+"""
+Size of meal [S,M,L]
+"""
+size: String
 
 """
 Delivery type to use [Required]
@@ -82,12 +97,12 @@ deliveryMethod: String!
 """
 Cost of order delivery
 """
-deliveryCost: Int
+deliveryCost: String
 
 """
 Total price from order [Required]
 """
-orderTotal: Int!
+orderTotal: String!
 
 }
 
@@ -114,11 +129,25 @@ type Mutation {
 """
 Add Menu Item to Table
 """
-addMenuItem(input: UserItemInput): MenuItem,
+addMenuItem(itemName: String!,
+  price: Int!,
+  vendorName: String!,
+  size: String!,
+  deliveryMethod: String!,
+  deliveryCost: Int,
+  orderTotal: Int!): MenuItem,
+  
 """
 Add user Order to Table
 """
-placeOrder(input: PlaceOrderInput): Order
+placeOrder(
+  itemName: String!,
+  price: String!,
+  vendorName: String!,
+  size: String!,
+  deliveryMethod: String!,
+  deliveryCost: String,
+  orderTotal: String!): Order
 
 }
 

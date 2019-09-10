@@ -11,7 +11,6 @@ export default class Home extends Component {
           <h1>Pimp My Book</h1>
           <h3>Food Delivery Web Application</h3>
           <h4>[GraphQL - Frontend Test Suite]</h4>
-         
             <Row>
               <Col xs={6} md={4}>
               </Col>
@@ -20,6 +19,16 @@ export default class Home extends Component {
                     <Link to="/queries/helloWorld">
                       <Button bsStyle="primary">Hello World</Button>
                     </Link>
+                </ButtonToolbar>
+              </Col>
+              <Col xs={6} md={4}>
+              </Col>
+            </Row>
+            <Row>
+              <Col xs={6} md={4}>
+              </Col>
+              <Col xs={6} md={4}>
+                <ButtonToolbar className="homeButtonToolbar">
                     <Link to="/queries/getAllItems">
                       <Button bsStyle="primary">Get All Items</Button>
                     </Link>
@@ -28,7 +37,19 @@ export default class Home extends Component {
               <Col xs={6} md={4}>
               </Col>
             </Row>
-         
+            <Row>
+              <Col xs={6} md={4}>
+              </Col>
+              <Col xs={6} md={4}>
+                <ButtonToolbar className="homeButtonToolbar">
+                  <Link to="/mutations/placeOrder">
+                    <Button bsStyle="primary">Place Order</Button>
+                  </Link>
+                </ButtonToolbar>
+              </Col>
+              <Col xs={6} md={4}>
+              </Col>
+            </Row>
         </div>
       </div>
     );

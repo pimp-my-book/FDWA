@@ -1,3 +1,5 @@
 # Frontend NodeJS Modules
 frontend/node_modules/
+
+# Environment File
 .env
