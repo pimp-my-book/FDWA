@@ -76,7 +76,7 @@ render() {
                                         <Form.Row>
                                             <Form.Group as={Col} controlId="formItemSelect">
                                                 <Form.Label>Items</Form.Label>
-                                                    <Form.Control as="select"
+                                                    <Form.Control required as="select"
                                                         value={ itemName }
                                                         onChange={ e => this.setState({ itemName: e.target.value }) }
                                                     >
@@ -92,7 +92,7 @@ render() {
                                         <Form.Row>
                                             <Form.Group>
                                                 <Form.Label as={ Col } controlId="formVendorName">Vendor Name</Form.Label>
-                                                    <Form.Control as="select"
+                                                    <Form.Control required as="select"
                                                         value={ vendorName }
                                                         onChange={ e => this.setState({ vendorName: e.target.value }) }
                                                     >
@@ -105,7 +105,7 @@ render() {
                                         <Form.Row>
                                             <Form.Group>
                                                 <Form.Label as={Col} controlId="formMealSize">Meal Size</Form.Label>
-                                                    <Form.Control as="select"
+                                                    <Form.Control required as="select"
                                                         value={ size }
                                                         onChange={ e => this.setState({ size: e.target.value }) }
                                                     >
@@ -118,7 +118,7 @@ render() {
                                         <Form.Row>
                                             <Form.Group>
                                                 <Form.Label as={ Col } controlId="formMenuItemPrice">Menu Item Price</Form.Label>
-                                                    <Form.Control type="text" placeholder="Price of Menu Item" 
+                                                    <Form.Control required type="text" placeholder="Price of Menu Item" 
                                                         value={ price }
                                                         onChange={ e => this.setState({ price: e.target.value }) }
                                                     />
@@ -127,7 +127,7 @@ render() {
                                         <Form.Row>
                                             <Form.Group>
                                                 <Form.Label as={ Col } controlId="formDeliveryMethod">Delivery Method</Form.Label>
-                                                    <Form.Control as="select"
+                                                    <Form.Control required as="select"
                                                         value={ deliveryMethod }
                                                         onChange={ e => this.setState({ deliveryMethod: e.target.value }) }
                                                     >
@@ -139,7 +139,7 @@ render() {
                                         <Form.Row>
                                             <Form.Group>
                                                 <Form.Label>Delivery Cost</Form.Label>
-                                                    <Form.Control type="text" placeholder="Cost of Delivery"
+                                                    <Form.Control required type="text" placeholder="Cost of Delivery"
                                                         value={ deliveryCost }
                                                         onChange={ e => this.setState({ deliveryCost: e.target.value }) }
                                                     />
