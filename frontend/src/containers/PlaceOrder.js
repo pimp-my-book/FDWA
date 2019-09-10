@@ -10,12 +10,12 @@ export default class PlaceOrder extends Component {
 
         this.state = {
             itemName:"",
-            price:0,
+            price:"",
             vendorName:"",
             size:"",
             deliveryMethod:"",
-            deliveryCost:0,
-            orderTotal:0
+            deliveryCost:"",
+            orderTotal:""
         }
     }
 render() {
