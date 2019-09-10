@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
 import Auth from "aws-amplify";
 import { Button, Form, Container, Col } from "react-bootstrap";
 import "../styles/styles.css";
