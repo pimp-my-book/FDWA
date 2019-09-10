@@ -4,6 +4,7 @@ import Home from "./containers/Home";
 import helloWorld from "./containers/helloWorld";
 import GetAllItems from "./containers/GetAllItems";
 import PlaceOrder from "./containers/PlaceOrder";
+import Login from "./containers/Login";
 
 export default () =>
   <Switch>
@@ -11,5 +12,6 @@ export default () =>
     <Route path="/queries/helloWorld" exact component={ helloWorld } />
     <Route path="/queries/getAllItems" exact component={ GetAllItems } />
     <Route path="/mutations/placeOrder" exact component={ PlaceOrder } />
+    <Route path="/login" exact component={ Login } />
   </Switch>;
   
