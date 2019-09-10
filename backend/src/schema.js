@@ -118,7 +118,14 @@ addMenuItem(input: UserItemInput): MenuItem,
 """
 Add user Order to Table
 """
-placeOrder(input: PlaceOrderInput): Order
+placeOrder(
+  itemName: String!,
+  price: Int!,
+  vendorName: String!,
+  size: String!,
+  deliveryMethod: String!,
+  deliveryCost: Int,
+  orderTotal: Int!): Order
 
 }
 
