@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+import {Mutation} from "react-apollo"
 import { Button, Form, Col, Row, Container } from "react-bootstrap";
 import "../styles/styles.css";
+import {Place_Order} from "../graphql/Mutation"
 
 export default class PlaceOrder extends Component {
   render() {
@@ -20,7 +22,21 @@ export default class PlaceOrder extends Component {
             </Row>
         </div>
         <div>
-            <Container className="placeOrder-form-container">
+            <Mutation
+            mutation={Place_Order}
+            >
+                {(order, {error, loading, data, called}) => {
+                  
+                  if(called && data){
+                      return (
+                          <div>
+                            Well done you've placed your order.
+                          </div>
+                      )
+                  } else {
+                      return(
+                          <div>
+<Container className="placeOrder-form-container">
                 <Form>
                     <Form.Row>
                         <Form.Group as={Col} controlId="formItemSelect">
@@ -61,6 +77,17 @@ export default class PlaceOrder extends Component {
                     </Button>
                 </Form>
             </Container>
+                          </div>
+                      )
+                  }
+
+
+
+                }}
+
+
+            </Mutation>
+            
         </div>
         <div>
             PRINT SELECTED ITEMS HERE -_-
