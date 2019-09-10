@@ -45,6 +45,14 @@ export default class PlaceOrder extends Component {
                         </Form.Group>
                     </Form.Row>
                     <Form.Row>
+                        <Form.Label>Delivery Cost</Form.Label>
+                            <Form.Control type="text" placeholder="Cost of Delivery"/>
+                    </Form.Row>
+                    <Form.Row>
+                        <Form.Label>Order Total</Form.Label>
+                            <Form.Control type="text" placeholder="Order Total" />
+                    </Form.Row>
+                    <Form.Row>
                         <Form.Check label="Delivery" type="radio" id="01-inline-deliveryMethod" />
                         <Form.Check label="Pick-Up" type="radio" id="02-inline-deliveryMethod" />
                     </Form.Row>
