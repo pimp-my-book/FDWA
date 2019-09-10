@@ -90,12 +90,17 @@ render() {
                                             </Form.Group>
                                         </Form.Row>
                                         <Form.Row>
-                                            <Form.Label as={ Col } controlId="formVendorName">Vendor Name</Form.Label>
-                                                <Form.Control as="select">
-                                                    <option>KFC</option>
-                                                    <option>McDonalds</option>
-                                                    <option>South by North-West</option>
-                                                </Form.Control>
+                                            <Form.Group>
+                                                <Form.Label as={ Col } controlId="formVendorName">Vendor Name</Form.Label>
+                                                    <Form.Control as="select"
+                                                        value={ vendorName }
+                                                        onChange={ e => this.setState({ vendorName: e.target.value }) }
+                                                    >
+                                                        <option>KFC</option>
+                                                        <option>McDonalds</option>
+                                                        <option>South by North-West</option>
+                                                    </Form.Control>
+                                            </Form.Group>
                                         </Form.Row>
                                         <Form.Row>
                                             <Form.Group>
@@ -113,13 +118,19 @@ render() {
                                         <Form.Row>
                                             <Form.Group>
                                                 <Form.Label as={ Col } controlId="formMenuItemPrice">Menu Item Price</Form.Label>
-                                                    <Form.Control type="text" placeholder="Price of Menu Item" />
+                                                    <Form.Control type="text" placeholder="Price of Menu Item" 
+                                                        value={ price }
+                                                        onChange={ e => this.setState({ price: e.target.value }) }
+                                                    />
                                             </Form.Group>
                                         </Form.Row>
                                         <Form.Row>
                                             <Form.Group>
                                                 <Form.Label as={ Col } controlId="formDeliveryMethod">Delivery Method</Form.Label>
-                                                    <Form.Control as="select">
+                                                    <Form.Control as="select"
+                                                        value={ deliveryMethod }
+                                                        onChange={ e => this.setState({ deliveryMethod: e.target.value }) }
+                                                    >
                                                         <option>Delivery</option>
                                                         <option>Pick-Up</option>
                                                     </Form.Control>
@@ -128,13 +139,19 @@ render() {
                                         <Form.Row>
                                             <Form.Group>
                                                 <Form.Label>Delivery Cost</Form.Label>
-                                                    <Form.Control type="text" placeholder="Cost of Delivery"/>
+                                                    <Form.Control type="text" placeholder="Cost of Delivery"
+                                                        value={ deliveryCost }
+                                                        onChange={ e => this.setState({ deliveryCost: e.target.value }) }
+                                                    />
                                             </Form.Group>
                                         </Form.Row>
                                         <Form.Row>
                                             <Form.Group>
                                                 <Form.Label>Order Total</Form.Label>
-                                                    <Form.Control required type="text" placeholder="Order Total" />
+                                                    <Form.Control required type="text" placeholder="Order Total" 
+                                                        value={ orderTotal }
+                                                        onChange={ e => this.setState({ orderTotal: e.target.value }) }
+                                                    />
                                             </Form.Group>
                                         </Form.Row>
                                         <Button variant="primary" type="submit">
