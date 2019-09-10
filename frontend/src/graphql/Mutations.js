@@ -1,6 +1,16 @@
 import gql from 'graphql-tag';
 
 // GraphQL - placeOrder Mutation
-export const PlaceOrder = gql `
-    
+export const Place_Order = gql `
+    mutation PlaceOrder($itemName: String!, $price: Int!, $vendorName: String!, $size: String!, $deliveryMethod: String!, $deliveryCost: Int, $orderTotal: Int!) {
+        placeOrder(itemName : $itemName, price : $price, vendorName : $vendorName, size : $size, deliveryMethod : $deliveryMethod, deliveryCost : $deliveryCost, orderTotal : $orderTotal) {
+            itemName
+            price
+            vendorName
+            size
+            deliveryMethod
+            deliveryCost
+            orderTotal
+        }
+    }
 `;
