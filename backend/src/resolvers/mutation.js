@@ -30,7 +30,7 @@ export const addMenuItem = async ({input:args}, context) => {
   }
 }
 
-export const placeOrder = async ({input:args}, context) => {
+export const placeOrder = async (args, context) => {
   const params = {
     TableName: process.env.FoodDeliveryTable,
     Item: {
