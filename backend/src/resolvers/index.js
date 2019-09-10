@@ -8,6 +8,6 @@ export const resolvers = {
     },
     Mutation: {
         addMenuItem: (root, {input:args}, context) => addMenuItem({input:args}, context),
-        placeOrder: (root, {input:args}, context) => placeOrder({input:args}, context)
+        placeOrder: (root, args, context) => placeOrder(args, context)
     }
 }
