@@ -17,8 +17,18 @@ export default class PlaceOrder extends Component {
             deliveryCost:0,
             orderTotal:0
         }
+
     }
   render() {
+      const {
+        itemName,
+        price,
+        vendorName,
+        size,
+        deliveryMethod,
+        deliveryCost,
+        orderTotal
+      } = this.state
     return (
       <div className="Home">
         <div className="landingPage">
@@ -36,6 +46,15 @@ export default class PlaceOrder extends Component {
         </div>
         <div>
             <Mutation
+            variables={{
+                itemName,
+        price,
+        vendorName,
+        size,
+        deliveryMethod,
+        deliveryCost,
+        orderTotal
+            }}
             mutation={Place_Order}
             >
                 {(order, {error, loading, data, called}) => {
