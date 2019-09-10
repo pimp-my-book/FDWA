@@ -118,7 +118,7 @@ render() {
                                         <Form.Row>
                                             <Form.Group>
                                                 <Form.Label as={ Col } controlId="formMenuItemPrice">Menu Item Price</Form.Label>
-                                                    <Form.Control required type="text" placeholder="Price of Menu Item" 
+                                                    <Form.Control required type="number" placeholder="Price of Menu Item" 
                                                         value={ price }
                                                         onChange={ e => this.setState({ price: e.target.value }) }
                                                     />
@@ -139,7 +139,7 @@ render() {
                                         <Form.Row>
                                             <Form.Group>
                                                 <Form.Label>Delivery Cost</Form.Label>
-                                                    <Form.Control required type="text" placeholder="Cost of Delivery"
+                                                    <Form.Control required type="number" placeholder="Cost of Delivery"
                                                         value={ deliveryCost }
                                                         onChange={ e => this.setState({ deliveryCost: e.target.value }) }
                                                     />
@@ -148,7 +148,7 @@ render() {
                                         <Form.Row>
                                             <Form.Group>
                                                 <Form.Label>Order Total</Form.Label>
-                                                    <Form.Control required type="text" placeholder="Order Total" 
+                                                    <Form.Control required type="number" placeholder="Order Total" 
                                                         value={ orderTotal }
                                                         onChange={ e => this.setState({ orderTotal: e.target.value }) }
                                                     />

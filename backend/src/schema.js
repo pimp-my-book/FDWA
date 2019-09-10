@@ -77,7 +77,7 @@ itemName: String!
 """
 Price of Menu Item [Required]
 """
-price: Int!
+price: String!
 
 """
 Vendor name [Required]
@@ -97,12 +97,12 @@ deliveryMethod: String!
 """
 Cost of order delivery
 """
-deliveryCost: Int
+deliveryCost: String
 
 """
 Total price from order [Required]
 """
-orderTotal: Int!
+orderTotal: String!
 
 }
 
@@ -142,12 +142,12 @@ Add user Order to Table
 """
 placeOrder(
   itemName: String!,
-  price: Int!,
+  price: String!,
   vendorName: String!,
   size: String!,
   deliveryMethod: String!,
-  deliveryCost: Int,
-  orderTotal: Int!): Order
+  deliveryCost: String,
+  orderTotal: String!): Order
 
 }
 
