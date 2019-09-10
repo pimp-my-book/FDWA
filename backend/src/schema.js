@@ -114,7 +114,14 @@ type Mutation {
 """
 Add Menu Item to Table
 """
-addMenuItem(input: UserItemInput): MenuItem,
+addMenuItem(itemName: String!,
+  price: Int!,
+  vendorName: String!,
+  size: String!,
+  deliveryMethod: String!,
+  deliveryCost: Int,
+  orderTotal: Int!): MenuItem,
+  
 """
 Add user Order to Table
 """
