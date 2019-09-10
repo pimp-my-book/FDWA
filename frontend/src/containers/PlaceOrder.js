@@ -2,9 +2,22 @@ import React, { Component } from "react";
 import {Mutation} from "react-apollo"
 import { Button, Form, Col, Row, Container } from "react-bootstrap";
 import "../styles/styles.css";
-import {Place_Order} from "../graphql/Mutation"
+import {Place_Order} from "../graphql/Mutations"
 
 export default class PlaceOrder extends Component {
+    constructor(props){
+        super(props);
+
+        this.state = {
+            itemName:"",
+            price:0,
+            vendorName:"",
+            size:"",
+            deliveryMethod:"",
+            deliveryCost:0,
+            orderTotal:0
+        }
+    }
   render() {
     return (
       <div className="Home">
