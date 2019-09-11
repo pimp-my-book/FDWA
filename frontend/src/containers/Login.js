@@ -36,7 +36,7 @@ const Login = ({  }) => {
                     <Form.Row>
                         <Form.Group>
                             <Form.Label as={ Col } controlId="formAuthPassword">Password</Form.Label>
-                                <Form.Control type="text" placeholder="Enter password here..."
+                                <Form.Control type="password" placeholder="Enter password here..."
                                     value = { password }
                                     onChange = { e => setPassword( e.target.value ) }
                                 />
