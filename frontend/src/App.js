@@ -29,6 +29,18 @@ class App extends Component {
     }
   }
 
+  async componentDidMount() {
+    try {
+      await Auth.currentSession()
+      .then( this.userHasAuthenticated(true) )
+    }
+    catch (e) {
+      if (e !== 'No Current User!') {
+        console.log(e)
+      }
+    }
+  }
+
   render() {
     const childProps = {
       isAuthenticated: this.state.isAuthenticated,
