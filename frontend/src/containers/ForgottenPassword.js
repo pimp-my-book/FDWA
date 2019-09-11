@@ -49,3 +49,21 @@ import { validate } from "@babel/types";
             this.setState({ emailError: e.message, isSendingCode: false });
         }
     }
+
+    handleConfirmClick = async event => {
+        event.preventDefault();
+        this.setState({ isConfirming: true });
+        try {
+            await Auth.forgotPasswordSubmit(
+                this.state.email,
+                this.state.code,
+                this.state.password
+            );
+            this.setState({ confirmed: true });
+        }
+        catch (e) {
+            alert(e.message);
+            this.setState({ confirmError: e.message, isConfirming: false });
+        }
+    }
+
