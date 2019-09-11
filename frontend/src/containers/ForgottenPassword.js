@@ -37,3 +37,15 @@ import { validate } from "@babel/types";
             [ event.target.id ]: event.target.value
         });
     }
+
+    handleSendCodeClick = async event => {
+        event.preventDefault();
+        this.setState({ isSendingCode: true });
+        try {
+            await Auth.forgotPassword( this.state.email );
+            this.setState({ codeSent: true });
+        }
+        catch (e) {
+            this.setState({ emailError: e.message, isSendingCode: false });
+        }
+    }
