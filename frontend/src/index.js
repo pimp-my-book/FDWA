@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router } from "react-router-dom";
+import Amplify from 'aws-amplify';
+import { BrowserRouter as Router } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import { ApolloProvider } from 'react-apollo';
 import { ApolloClient } from 'apollo-boost';
@@ -7,6 +8,7 @@ import { createHttpLink } from 'apollo-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import './styles/styles.css';
 import App from './App';
+import config from './config';
 import * as serviceWorker from './serviceWorker';
 
 const stage = process.env.REACT_APP_STAGE === "prod";
