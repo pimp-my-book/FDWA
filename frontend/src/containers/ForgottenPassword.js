@@ -3,6 +3,7 @@ import { Auth } from "react";
 import { Form, Container, Col, Row } from "react-bootstrap";
 import { validate } from "@babel/types";
 
+export default class ForgottenPassword extends Component {
     constructor(props){
 		super(props);
 
@@ -67,3 +68,21 @@ import { validate } from "@babel/types";
         }
     }
 
+    renderRequestCodeForm() {
+        return (
+            <Container>
+                <Row>
+                    
+                </Row>
+            </Container>
+        )
+    }
+
+    render() {
+        return(
+            <div>
+                Poopsy Floopsy
+            </div>
+        );
+    }
+}
