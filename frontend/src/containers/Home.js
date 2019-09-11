@@ -50,6 +50,19 @@ export default class Home extends Component {
               <Col xs={6} md={4}>
               </Col>
             </Row>
+            <Row>
+              <Col xs={6} md={4}>
+              </Col>
+              <Col xs={6} md={4}>
+                <ButtonToolbar className="homeButtonToolbar">
+                  <Link to="/login">
+                    <Button bsStyle="primary">Login</Button>
+                  </Link>
+                </ButtonToolbar>
+              </Col>
+              <Col xs={6} md={4}>
+              </Col>
+            </Row>
         </div>
       </div>
     );

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import {Mutation} from "react-apollo";
-import { Alert, Button, Form, Col, Row, Container } from "react-bootstrap";
+import { Button, Form, Col, Row, Container } from "react-bootstrap";
 import "../styles/styles.css";
 import {Place_Order} from "../graphql/Mutations";
 
