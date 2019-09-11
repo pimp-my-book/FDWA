@@ -14,12 +14,21 @@ export default class Home extends Component {
             <Row>
               <Col xs={6} md={4}>
               </Col>
+              <Col className="personal-space" xs={6} md={4}>
+                <Button variant="primary" href="/queries/helloWorld">
+                  Hello World
+                </Button>
+              </Col>
               <Col xs={6} md={4}>
-                <ButtonToolbar className="homeButtonToolbar">
-                    <Link to="/queries/helloWorld">
-                      <Button bsStyle="primary">Hello World</Button>
-                    </Link>
-                </ButtonToolbar>
+              </Col>
+            </Row>
+            <Row>
+              <Col xs={6} md={4}>
+              </Col>
+              <Col className="personal-space" xs={6} md={4}>
+                <Button variant="primary" href="/queries/getAllItems">
+                  Get All Items
+                </Button>
               </Col>
               <Col xs={6} md={4}>
               </Col>
@@ -28,24 +37,9 @@ export default class Home extends Component {
               <Col xs={6} md={4}>
               </Col>
               <Col xs={6} md={4}>
-                <ButtonToolbar className="homeButtonToolbar">
-                    <Link to="/queries/getAllItems">
-                      <Button bsStyle="primary">Get All Items</Button>
-                    </Link>
-                </ButtonToolbar>
-              </Col>
-              <Col xs={6} md={4}>
-              </Col>
-            </Row>
-            <Row>
-              <Col xs={6} md={4}>
-              </Col>
-              <Col xs={6} md={4}>
-                <ButtonToolbar className="homeButtonToolbar">
-                  <Link to="/mutations/placeOrder">
-                    <Button bsStyle="primary">Place Order</Button>
-                  </Link>
-                </ButtonToolbar>
+                <Button variant="primary" href="/mutations/placeOrder">
+                  Place Order
+                </Button>
               </Col>
               <Col xs={6} md={4}>
               </Col>
