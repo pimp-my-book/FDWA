@@ -23,3 +23,12 @@ import { validate } from "@babel/types";
     validateCodeForm() {
         return this.state.email.length > 0;
     }
+
+    validateResetForm() {
+        return (
+            this.state.code.length > 0 &&
+            this.state.password.length > 0 &&
+            this.state.password === this.state.confirmPassword
+        );
+    }
+
