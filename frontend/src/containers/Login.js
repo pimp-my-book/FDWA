@@ -51,6 +51,13 @@ const Login = ({  }) => {
                             </Button>
                         </Form.Group>
                     </Form.Row>
+                    <Form.Row>
+                        <Form.Group>
+                                <Button variant="primary" href="/ForgottenPassword">
+                                    Forgot your password?
+                                </Button>
+                        </Form.Group>
+                    </Form.Row>
                 </Form>
             </Container>
         </div>
