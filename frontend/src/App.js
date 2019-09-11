@@ -38,12 +38,11 @@ class App extends Component {
     return(
       <div className="appContainer">
         <Navbar fluid collapseOnSelect>
-          
             <Navbar.Brand>
               <Link to="/"><span role="img" aria-label="Pizza">🍕</span></Link>
+              <Button onClick={ this.handleLogout }>Logout</Button>
             </Navbar.Brand>
             <Navbar.Toggle />
-          
         </Navbar>
         <Routes childProps={ childProps }/>
       </div>
