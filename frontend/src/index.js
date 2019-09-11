@@ -11,6 +11,25 @@ import App from './App';
 import config from './config';
 import * as serviceWorker from './serviceWorker';
 
+Amplify.configure({
+  Auth: {
+    mandatorySignIn: true,
+    region: config.cognito.REGION,
+    userPoolId: config.cognito.USER_POOL_ID,
+    identityPoolId: config.cognito.IDENTITY_POOL_ID,
+    userPoolWebClientId: config.cognito.APP_CLIENT_ID
+  },
+  API: {
+    endpoints: [
+      {
+        name: "fdwa",
+        endpoint: config.apiGateway.URL,
+        region: config.apiGateway.REGION
+      }
+    ]
+  }
+});
+
 const stage = process.env.REACT_APP_STAGE === "prod";
 
 const httpLink = createHttpLink({
