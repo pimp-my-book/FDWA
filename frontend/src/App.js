@@ -45,7 +45,7 @@ class App extends Component {
             <Navbar.Toggle />
           
         </Navbar>
-        <Routes />
+        <Routes childProps={ childProps }/>
       </div>
     );
   }
