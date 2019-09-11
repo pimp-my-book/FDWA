@@ -19,3 +19,7 @@ import { validate } from "@babel/types";
             confirmError: ""
         };
     }
+
+    validateCodeForm() {
+        return this.state.email.length > 0;
+    }
