@@ -46,9 +46,9 @@ const Login = ({  }) => {
                     </Form.Row>
                     <Form.Row>
                         <Form.Group>
-                    <Button variant="primary" type="submit">
-                        Login
-                    </Button>
+                            <Button variant="primary" type="submit">
+                                Login
+                            </Button>
                         </Form.Group>
                     </Form.Row>
                 </Form>
