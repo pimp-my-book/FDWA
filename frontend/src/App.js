@@ -18,6 +18,17 @@ class App extends Component {
     this.setState({ isAuthenticated:authenticated })
   }
 
+  handleLogout = async event => {
+    try {
+      await Auth.signOut();
+      this.userHasAuthenticated(false);
+      alert("Logged out")
+    }
+    catch (e) {
+      console.log(e)
+    }
+  }
+
   render() {
     const childProps = {
       isAuthenticated: this.state.isAuthenticated,
