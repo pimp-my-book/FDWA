@@ -6,6 +6,11 @@ import './styles/styles.css';
 
 class App extends Component {
   render() {
+    const childProps = {
+      isAuthenticated: this.state.isAuthenticated,
+      userHasAuthenticated: this.state.userHasAuthenticated
+    }
+
     return(
       <div className="appContainer">
         <Navbar fluid collapseOnSelect>
