@@ -6,6 +6,13 @@ import './styles/styles.css';
 import { Auth } from "aws-amplify";
 
 class App extends Component {
+  constructor( props ) {
+    super(props);
+    this.state = {
+      isAuthenticated: false,
+      isAuthenticating: false
+    };
+  }
   render() {
     const childProps = {
       isAuthenticated: this.state.isAuthenticated,
