@@ -32,3 +32,8 @@ import { validate } from "@babel/types";
         );
     }
 
+    handleChange = event => {
+        this.setState({
+            [ event.target.id ]: event.target.value
+        });
+    }
