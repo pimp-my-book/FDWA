@@ -8,9 +8,11 @@ const Login = ({  }) => {
     const handleSubmit = async event => {
         event.preventDefault();
         try {
-            await Auth.signIn(email, password)
+            await Auth.signIn(email, password);
+            alert( "Logged in" )
         }
         catch (e) {
+            alert(e.message);
             console.log(e)
         }
     }
