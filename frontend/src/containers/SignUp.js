@@ -2,6 +2,7 @@ import React, { Components, useState } from "react";
 import Auth from "@aws-amplify/auth";
 import { Button, Form, Container, Col, Row } from "react-bootstrap";
 
+const SignUp = ( ) => {
     const [ username, setUsername ] = useState("");
     const [ password, setPassword ] = useState("");
     const [ confirmationCode, setConfirmationCode ] = useState("");
@@ -115,3 +116,8 @@ import { Button, Form, Container, Col, Row } from "react-bootstrap";
         );
     }
     
+
+    return (<renderForm/>)
+}
+
+export default SignUp
