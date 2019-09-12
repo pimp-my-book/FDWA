@@ -14,3 +14,17 @@ import { Button, Form, Container, Col, Row } from "react-bootstrap";
             alert(e.message)
         }
     }
+
+    const handleConfirmationSubmit = async event => {
+        event.preventDefault();
+
+        try {
+            await Auth.confirmSignUp(username, confirmationCode);
+            await Auth.signIn(username, password)
+        }
+        catch (e) {
+            alert(e.message)
+        }
+    }
+
+    const renderForm = () => {
