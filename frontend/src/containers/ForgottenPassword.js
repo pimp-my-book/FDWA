@@ -74,7 +74,7 @@ export default class ForgottenPassword extends Component {
                     <Col sm={6} lg={4}>
                         <div>Reset Password</div>
                         <Form onSubmit={ this.handleSendCodeClick }>
-                            <Form.Group controlId="renderRequestCodeForm-email">
+                            <Form.Group controlId="email">
                                 <Form.Label>Email</Form.Label>
                                     <Form.Control 
                                         required
@@ -101,7 +101,7 @@ export default class ForgottenPassword extends Component {
                     <Col sm={6} lg={4}>
                         <div>Confirmation Form</div>
                         <Form onSubmit={ this.handleConfirmClick }>
-                            <Form.Group controlId="renderConfirmationForm-code">
+                            <Form.Group controlId="code">
                                 <Form.Label>Confirmation Code</Form.Label>
                                     <Form.Control
                                         type="tel"
@@ -109,7 +109,7 @@ export default class ForgottenPassword extends Component {
                                         onChange={ this.handleChange }
                                     />
                             </Form.Group>
-                            <Form.Group controlId="renderConfirmationForm-password">
+                            <Form.Group controlId="password">
                                 <Form.Label>New Password</Form.Label>
                                     <Form.Control
                                         type="password"
@@ -117,7 +117,7 @@ export default class ForgottenPassword extends Component {
                                         onChange={ this.handleChange }
                                     />
                             </Form.Group>
-                            <Form.Group controlId="renderConfirmationForm-confirmPassword">
+                            <Form.Group controlId="confirmPassword">
                                 <Form.Label>Confirm New Password</Form.Label>
                                     <Form.Control
                                         type="password"
