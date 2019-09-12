@@ -157,7 +157,13 @@ export default class ForgottenPassword extends Component {
     render() {
         return(
             <div>
-                Poopsy Floopsy
+                {
+                    !this.state.codeSent
+                    ? this.renderRequestCodeForm()
+                    : !this.state.confirmed
+                    ? this.renderConfirmationForm()
+                    : this.renderSuccessMessage()
+                }
             </div>
         );
     }
