@@ -71,10 +71,27 @@ export default class ForgottenPassword extends Component {
         return (
             <Container>
                 <Row>
-                    
+                    <Col sm={6} lg={4}>
+                        <div>Reset Password</div>
+                        <Form onSubmit={ this.handleSendCodeClick }>
+                            <Form.Group controlId="renderRequestCodeForm-email">
+                                <Form.Label>Email</Form.Label>
+                                    <Form.Control 
+                                        required
+                                        placeholder="Enter email here..."
+                                        type="email"
+                                        value={ this.state.email }
+                                        onChange={ this.handleChange }
+                                    />
+                            </Form.Group>
+                                <Button variant="primary" type="submit">
+                                    Send Reset Code
+                                </Button>
+                        </Form>
+                    </Col>
                 </Row>
             </Container>
-        )
+        );
     }
 
     render() {
