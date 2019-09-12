@@ -135,6 +135,25 @@ export default class ForgottenPassword extends Component {
         );
     }
 
+    renderSuccessMessage() {
+        return(
+            <Container>
+                <Row>
+                    <Col sm={6} lg={4}>
+                        <div>Your password has been changed (woopidy doodaa -_-)</div>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col sm={6} lg={4}>
+                        <Button variant="primary" href="/login">
+                            Login
+                        </Button>
+                    </Col>
+                </Row>
+            </Container>
+        );
+    }
+
     render() {
         return(
             <div>
