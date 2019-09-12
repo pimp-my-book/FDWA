@@ -5,6 +5,7 @@ import helloWorld from "./containers/helloWorld";
 import GetAllItems from "./containers/GetAllItems";
 import PlaceOrder from "./containers/PlaceOrder";
 import Login from "./containers/Login";
+import ForgottenPassword from "./containers/ForgottenPassword";
 
 export default () =>
   <Switch>
@@ -13,5 +14,6 @@ export default () =>
     <Route path="/queries/getAllItems" exact component={ GetAllItems } />
     <Route path="/mutations/placeOrder" exact component={ PlaceOrder } />
     <Route path="/login" exact component={ Login } />
+    <Route path="/ForgottenPassword" exact component={ ForgottenPassword } />
   </Switch>;
   
