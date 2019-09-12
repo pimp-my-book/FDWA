@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Auth from "@aws-amplify/auth";
-import { Form, Container, Col, Row } from "react-bootstrap";
+import { Button, Form, Container, Col, Row } from "react-bootstrap";
 
 export default class ForgottenPassword extends Component {
     constructor(props){
