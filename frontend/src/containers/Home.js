@@ -36,7 +36,7 @@ export default class Home extends Component {
             <Row>
               <Col xs={6} md={4}>
               </Col>
-              <Col xs={6} md={4}>
+              <Col className="personal-space" xs={6} md={4}>
                 <Button variant="primary" href="/mutations/placeOrder">
                   Place Order
                 </Button>
@@ -47,12 +47,10 @@ export default class Home extends Component {
             <Row>
               <Col xs={6} md={4}>
               </Col>
-              <Col xs={6} md={4}>
-                <ButtonToolbar className="homeButtonToolbar">
-                  <Link to="/login">
-                    <Button bsStyle="primary">Login</Button>
-                  </Link>
-                </ButtonToolbar>
+              <Col className="personal-space" xs={6} md={4}>
+                <Button variant="primary" href="/login">
+                  Login
+                </Button>
               </Col>
               <Col xs={6} md={4}>
               </Col>
