@@ -22,7 +22,7 @@ const Login = ({  }) => {
 
     return(
         <div>
-            <Container className="auth-form-container">
+            <Container className="login-form-container">
                 <Form 
                     onSubmit = { handleSubmit }
                 >
