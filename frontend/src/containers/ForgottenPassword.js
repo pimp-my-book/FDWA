@@ -94,6 +94,47 @@ export default class ForgottenPassword extends Component {
         );
     }
 
+    renderConfirmationForm() {
+        return(
+            <Container>
+                <Row>
+                    <Col sm={6} lg={4}>
+                        <div>Confirmation Form</div>
+                        <Form onSubmit={ this.handleConfirmClick }>
+                            <Form.Group controlId="renderConfirmationForm-code">
+                                <Form.Label>Confirmation Code</Form.Label>
+                                    <Form.Control
+                                        type="tel"
+                                        value={ this.state.code }
+                                        onChange={ this.handleChange }
+                                    />
+                            </Form.Group>
+                            <Form.Group controlId="renderConfirmationForm-password">
+                                <Form.Label>New Password</Form.Label>
+                                    <Form.Control
+                                        type="password"
+                                        value={ this.state.password }
+                                        onChange={ this.handleChange }
+                                    />
+                            </Form.Group>
+                            <Form.Group controlId="renderConfirmationForm-confirmPassword">
+                                <Form.Label>Confirm New Password</Form.Label>
+                                    <Form.Control
+                                        type="password"
+                                        value={ this.state.confirmPassword }
+                                        onChange={ this.handleChange }
+                                    />
+                            </Form.Group>
+                                <Button variant="primary" type="submit">
+                                    Confirm
+                                </Button>
+                        </Form>
+                    </Col>
+                </Row>
+            </Container>
+        );
+    }
+
     render() {
         return(
             <div>
