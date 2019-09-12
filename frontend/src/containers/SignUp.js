@@ -44,14 +44,14 @@ const SignUp = ( ) => {
                   </Col>
               </Row>
               <Row>
-                  <Form onSubmit={ this.handleSubmit }>
+                  <Form onSubmit={ handleSubmit }>
                     <Form.Row>
                         <Form.Group controlId="sign-up-email">
                             <Form.Label>Email Address</Form.Label>
                                 <Form.Control
                                     type="email"
                                     placeholder="Please enter your email address here..."
-                                    value={ this.username }
+                                    value={ username }
                                     onChange = { e => setUsername( e.target.value ) }
                                 />
                         </Form.Group>
@@ -62,7 +62,7 @@ const SignUp = ( ) => {
                                 <Form.Control
                                     type="password"
                                     placeholder="Please enter your password here..."
-                                    value={ this.password }
+                                    value={ password }
                                     onChange = { e => setPassword( e.target.value ) }
                                 />
                         </Form.Group>
@@ -115,9 +115,16 @@ const SignUp = ( ) => {
             </Container>
         );
     }
-    
 
-    return (<renderForm/>)
+    return (
+        <div>
+            {
+                newUser === null
+                ? <render/>
+                : <renderConfirmationForm/>
+            }
+        </div>
+    );
 }
 
 export default SignUp
