@@ -2,6 +2,11 @@ import React, { Components, useState } from "react";
 import Auth from "@aws-amplify/auth";
 import { Button, Form, Container, Col, Row } from "react-bootstrap";
 
+    const [ username, setUsername ] = useState("");
+    const [ password, setPassword ] = useState("");
+    const [ confirmationCode, setConfirmationCode ] = useState("");
+    const [ newUser, setNewUser ] = useState(null);
+
     const handleSubmit = async event => {
         event.preventDefault();
 
