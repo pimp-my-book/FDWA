@@ -78,3 +78,40 @@ import { Button, Form, Container, Col, Row } from "react-bootstrap";
           </Container>  
         );
     }
+
+    const renderConfirmationForm = () => {
+        return(
+            <Container>
+                <Row>
+                  <Col>
+                    <div>
+                        Confirmation Code
+                    </div>
+                  </Col>
+              </Row>
+              <Row>
+                  <Form onSubmit={ handleConfirmationSubmit }>
+                      <Form.Row>
+                          <Form.Group controlId="confirmation-code-input">
+                              <Form.Label>We've sent a Confirmation Code to your Email Address -_-</Form.Label>
+                                <Form.Control
+                                    type="text"
+                                    placeholder="Please enter your Code here..."
+                                    value={ confirmationCode }
+                                    onChange={ e => setConfirmationCode( e.target.value ) }
+                                />
+                          </Form.Group>
+                      </Form.Row>
+                      <Form.Row>
+                          <Form.Group controlId="confirmation-code-button">
+                              <Button variant="primary" type="submit">
+                                  Confirm Your Code
+                              </Button>
+                          </Form.Group>
+                      </Form.Row>
+                  </Form>
+              </Row>
+            </Container>
+        );
+    }
+    
