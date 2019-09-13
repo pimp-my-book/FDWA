@@ -13,12 +13,14 @@ import SignUp from "./containers/SignUp";
 
 export default () =>
   <Switch>
-    <Route path="/" exact component={ Home } />
-    <Route path="/queries/helloWorld" exact component={ helloWorld } />
-    <Route path="/queries/getAllItems" exact component={ GetAllItems } />
-    <Route path="/mutations/placeOrder" exact component={ PlaceOrder } />
-    <Route path="/login" exact component={ Login } />
-    <Route path="/ForgottenPassword" exact component={ ForgottenPassword } />
-    <Route path="/signup" exact component={ SignUp } />
+    <AppliedRoute path="/" exact component={ Home } />
+
+    <AuthenticatedRoute path="/queries/helloWorld" exact component={ helloWorld } />
+    <AuthenticatedRoute path="/queries/getAllItems" exact component={ GetAllItems } />
+    <AuthenticatedRoute path="/mutations/placeOrder" exact component={ PlaceOrder } />
+
+    <UnauthenticatedRoute path="/login" exact component={ Login } />
+    <UnauthenticatedRoute path="/ForgottenPassword" exact component={ ForgottenPassword } />
+    <UnauthenticatedRoute path="/signup" exact component={ SignUp } />
   </Switch>;
   
