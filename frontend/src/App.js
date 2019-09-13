@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import { Navbar, Button } from "react-bootstrap";
+import { Auth } from "aws-amplify";
+import Navbar from "react-bootstrap/Navbar";
+import Button from "react-bootstrap/Button";
 import Routes from "./Routes";
 import './styles/styles.css';
-import { Auth } from "aws-amplify";
 
 class App extends Component {
   constructor( props ) {
