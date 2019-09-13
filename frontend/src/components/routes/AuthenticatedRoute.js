@@ -17,14 +17,19 @@ function querystring(name, url = window.location.href) {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
+export default ({ component: C, props: cProps, ...rest }) => {
+    const redirect = querystring("redirect");
 
-<Route
-    { ...rest }
-    render={ props =>
-        cProps.isAuthenticated
-        ? <C { ...props } { ...cProps } />
-        : <Redirect
-            to={ `/login?redirect=${ props.location.pathname }${ props.location.search }` }
+    return(
+        <Route
+            { ...rest }
+            render={ props =>
+                !cProps.isAuthenticated
+                    ? <C { ...props } { ...cProps } />
+                    : <Redirect
+                        to={ redirect === "" || redirect === null ? "/" : redirect }
+                    />
+            }
         />
-    }
-/>;
+    );
+};
