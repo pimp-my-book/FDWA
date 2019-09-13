@@ -1,4 +1,4 @@
-import React, { Components, useState } from "react";
+import React, { useState } from "react";
 import Auth from "@aws-amplify/auth";
 import { Button, Form, Container, Col, Row } from "react-bootstrap";
 
@@ -120,7 +120,7 @@ const SignUp = ( ) => {
         <div>
             {
                 newUser === null
-                ? <render/>
+                ? <renderForm/>
                 : <renderConfirmationForm/>
             }
         </div>
