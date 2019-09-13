@@ -33,7 +33,7 @@ const SignUp = ( ) => {
         }
     }
 
-    const renderForm = () => {
+    const RenderForm = () => {
         return(
           <Container>
               <Row>
@@ -80,7 +80,7 @@ const SignUp = ( ) => {
         );
     }
 
-    const renderConfirmationForm = () => {
+    const RenderConfirmationForm = () => {
         return(
             <Container>
                 <Row>
@@ -120,8 +120,8 @@ const SignUp = ( ) => {
         <div>
             {
                 newUser === null
-                ? <renderForm/>
-                : <renderConfirmationForm/>
+                ? RenderForm()
+                : RenderConfirmationForm()
             }
         </div>
     );
