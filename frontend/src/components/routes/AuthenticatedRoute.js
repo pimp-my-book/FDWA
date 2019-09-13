@@ -1,13 +1,15 @@
 import React from "react";
 import { Route, Redirect } from "react-router-dom";
 
-export default ({ component: Container, props: mapContextToProps, ...rest }) =>
+export default ({ component: C, props: cProps, ...rest }) =>
 
 <Route
     { ...rest }
     render={ props =>
-        !mapContextToProps.isAuthenticated
+        cProps.isAuthenticated
         ? <C { ...props } { ...cProps } />
-        : <Redirect to="/" />
+        : <Redirect
+            to={ `/login?redirect=${ props.location.pathname }${ props.location.search }` }
+        />
     }
 />;
