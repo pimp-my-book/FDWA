@@ -1,7 +1,4 @@
 import React from "react";
-import AppliedRoute from "./components/routes/AppliedRoute";
-import AuthenticatedRoute from "./components/routes/AuthenticatedRoute";
-import UnauthenticatedRoute from "./components/routes/UnauthenticatedRoute";
 import { Switch } from "react-router-dom";
 import Home from "./containers/Home";
 import helloWorld from "./containers/helloWorld";
@@ -10,6 +7,9 @@ import PlaceOrder from "./containers/PlaceOrder";
 import Login from "./containers/Login";
 import ForgottenPassword from "./containers/ForgottenPassword";
 import SignUp from "./containers/SignUp";
+import AppliedRoute from "./components/routes/AppliedRoute";
+import AuthenticatedRoute from "./components/routes/AuthenticatedRoute";
+import UnauthenticatedRoute from "./components/routes/UnauthenticatedRoute";
 
 export default () =>
   <Switch>
