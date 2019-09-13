@@ -47,8 +47,8 @@ export default class Home extends Component {
               <Col xs={6} md={4}>
               </Col>
               <Col className="personal-space" xs={6} md={4}>
-                <Button variant="primary" href="/login">
-                  Login
+                <Button variant="primary" href="/signup">
+                  SignUp
                 </Button>
               </Col>
               <Col xs={6} md={4}>
